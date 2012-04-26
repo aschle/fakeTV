@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function () {
+	
+	jQuery.noConflict();
+	
+	// Position modal box in the center of the page
+	jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", ( jQuery(window).height() - this.height() ) / 2+jQuery(window).scrollTop() + "px");
+		this.css("left", ( jQuery(window).width() - this.width() ) / 2+jQuery(window).scrollLeft() + "px");
+		return this;
+	  }
+	
+	jQuery(".modal-profile").center();
+	
+	// Set height of light out div	
+	jQuery('.modal-lightsout').css("height", jQuery(document).height());	
+
+	// Fade in modal box once link is clicked
+	jQuery('a[rel="modal-profile"]').click(function() {
+		jQuery('.modal-profile').fadeIn("slow");
+		jQuery('.modal-lightsout').fadeTo("slow", .5);
+	});
+	
+	// closes modal box once close link is clicked, or if the lights out divis clicked
+	jQuery('a.modal-close-profile, .modal-lightsout').click(function() {
+		jQuery('.modal-profile').fadeOut("slow");
+		jQuery('.modal-lightsout').fadeOut("slow");
+	});
+});
+</script>
+<style type="text/css">
+body {
+	color:#333;
+	background-color:#ec176c;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+.modal-profile h2 {
+	font-size:2em;
+	letter-spacing:-1px;
+}
+.modal-profile {
+	display:none;
+	height: 250px;
+	width: 500px;
+	padding:25px;
+	border:1px solid #fff;
+	box-shadow: 0px 2px 7px #292929;
+	-moz-box-shadow: 0px 2px 7px #292929;
+	-webkit-box-shadow: 0px 2px 7px #292929;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background: #f2f2f2;
+	z-index:50;
+}
+
+.modal-lightsout {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:25;
+	background:#000;
+}
+
+a.modal-close-profile {
+	position:absolute;
+	top:-15px;
+	right:-15px;
+}
+
+a.modal-social {
+	margin:0 10px 0 0;
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="modal-lightsout"></div>
+<div class="modal-profile">
+    <h2>Nam liber tempor cum soluta nobis eleifend</h2>
+    <a href="#" title="Close profile window" class="modal-close-profile"><img src="close.png" alt="Close profile window" /></a>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit littera um formas humanitatis per seacula quarta decima et quinta decima.Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+	<a href="http://www.klevermedia.co.uk" class="modal-social"><img src="http://www.klevermedia.co.uk/themes/klevermedia/images/social/lovedsgn.png" alt="Love design" /></a>
+    <a href="http://www.klevermedia.co.uk" class="modal-social"><img src="http://www.klevermedia.co.uk/themes/klevermedia/images/social/forrst.png" alt="Forrst" /></a>
+    <a href="http://www.klevermedia.co.uk" class="modal-social"><img src="http://www.klevermedia.co.uk/themes/klevermedia/images/social/twitter.png" alt="Love design" /></a>
+    <a href="http://www.klevermedia.co.uk" class="modal-social"><img src="http://www.klevermedia.co.uk/themes/klevermedia/images/social/skype.png" alt="Love design" /></a>
+    <a href="http://www.klevermedia.co.uk" class="modal-social"><img src="http://www.klevermedia.co.uk/themes/klevermedia/images/social/rss.png" alt="Love design" /></a>
+</div>
+<a href="#" rel="modal-profile">open modal box</a>
+</div>
+</body>
+</html>

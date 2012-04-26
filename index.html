@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Dustrasa - Ein Fernsehsender für die ganze Familie</title>
+	<meta name="description" content="Ein Fernsehsender für die ganze Familie.">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/mydesign.css">
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+	<!-- Typeface Google WebFonts -->
+	<link href='http://fonts.googleapis.com/css?family=Walter+Turncoat|Cutive' rel='stylesheet' type='text/css'>
+
+	<!-- JS
+	================================================== -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="javascripts/tabs.js"></script>
+
+
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$.fn.center = function () {
+		        this.css("position","absolute");
+		        this.css("top", ( jQuery(window).height() - this.height() ) / 2+jQuery(window).scrollTop() + "px");
+		        this.css("left", ( jQuery(window).width() - this.width() ) / 2+jQuery(window).scrollLeft() + "px");
+		        return this;
+		      }
+		 
+		    $(".modal-profile").center();
+		 
+		    $('.modal-lightsout').css("height", jQuery(document).height()); 
+		 
+		    $('a[rel="modal-profile"]').click(function() {
+		        $('.modal-profile').fadeIn("slow");
+		        $('.modal-lightsout').fadeTo("slow", .9);
+		    });
+		 
+		    $('a.modal-close-profile, .modal-lightsout').click(function() {
+		        $('.modal-profile').fadeOut("slow");
+		        $('.modal-lightsout').fadeOut("slow");
+		    });
+		});
+	</script>
+
+
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+
+	<div class="container">
+		<div class="sixteen columns" style="margin-top: 10px;">
+			<img src="images/logoD.png" />
+			<h1 class="remove-bottom" style="display:inline; padding-left:20px;">Dustrasa</h1>
+			<h5 style="display:inline; margin-left:20px;">Der Sender für die ganze Familie.</h5>
+			<hr />
+		</div>
+		<div class="one-third column">
+
+			<!-- http://web.enavu.com/tutorials/making-image-overlay-caption-using-css/ -->
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+
+				<a rel="modal-profile" href="#"><img src='images/manWoman.png' /></a>
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Jeden Donnerstag um 20:15 Uhr</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">SERIEN</h6>
+			<h4>Geheime Liebe</h4>
+			<p>Die erste Staffel unserer erfolgreichen Serie "Geheime Liebe" geht in die Endrunde. Verpassen Sie nicht die letzten Folgen! Noch bis zum 31. Mai immer donnerstags um 20:15 Uhr.</p>
+
+
+
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+				<img src='images/dokus.png' />
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Die Welt der Dokumentationen</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">DOKU-STRASA</h6>
+			<h4>Planet der Farben</h4>
+			<p>In unserer Dokumentationsreihe "Doku-Strasa" dreht sich alles um unseren Planeten Erde. Verschiedenste Themen werden jeden Samstag ab 15:30 Uhr beleuchtet.</p>
+		</div>
+
+
+
+		<div class="one-third column">
+
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+				<img src='images/paperBulk.png' />
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Heute um 22:30 Uhr</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">DREITEILIGE REPORTAGE</h6>
+			<h4>Wissen 2.1 - Teil II</h4>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+				<img src='images/Internat.png' />
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Die zweite Staffel ab 4. Mai immer FREITAGS um 20:15 Uhr</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">SERIEN</h6>
+			<h4>Jugendinternat</h4>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+		</div>
+
+
+		<div class="one-third column">
+
+
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+				<img src='images/dSchool.png' />
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Interviews mit Experten</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">REPORTAGE</h6>
+			<h4>Die Schule der Zukunft</h4>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+
+
+			<!-- wrapper div -->
+			<div class='wrapper'>
+				<!-- image -->
+				<img src="images/zeitreisen.png" />
+				<!-- description div -->
+				<div class='description'>
+					<!-- description content -->
+					<p class='description_content'>Am 3. Mai um 21:45 Uhr</p>
+					<!-- end description content -->
+				</div>
+				<!-- end description div -->
+			</div>
+			<!-- end wrapper div -->
+			<h6 class="tag">WISSENSCHAFTSDOKU</h6>
+			<h4>Zeitreisen</h4>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+		</div>
+
+	</div><!-- container -->
+
+	<div class="container footer">
+		<div class="sixteen columns" style="margin-top: 10px;">
+		<center><strong>E-Mail:</strong> info@xxx.de • <strong>Adresse:</strong> Berlinerstraße 32, 12045 Berlin • <strong>Copyright:</strong> XXX</center>	
+		</div>
+	</div>
+
+
+
+
+
+	<div class="modal-profile">
+		<h6 class="tag">SERIEN</h6>
+		<h4>Geheime Liebe</h4>
+	    <a class="modal-close-profile" title="Close profile window" href="#">
+	    	<img src="images/close.png" alt="Close profile window" />
+	    </a>
+	 
+		Die erste Staffel unserer erfolgreichen Serie "Geheime Liebe" geht in die Endrunde. Verpassen Sie nicht die letzten Folgen! Noch bis zum 31. Mai immer donnerstags um 20:15 Uhr.
+
+	</div>
+
+	<div class="modal-lightsout"></div>
+
+
+<!--  Document
+================================================== -->
+</body>
+</html>
